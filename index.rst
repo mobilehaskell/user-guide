@@ -25,7 +25,7 @@ The cross compiler use the LLVM code generator. As such an LLVM installation is
 required and needs to be in ``PATH``.  The LLVM toolchain provided by Xcode is
 insufficient as it does not provide the ``opt`` tool.
 
-LLVM can be downloaded from `<http://releases.llvm.org/download.html#5.0.0>`.
+LLVM can be downloaded from http://releases.llvm.org/download.html#5.0.0.
 Extracting and adding the ``bin`` folder to ``PATH`` should be sufficient::
 
    $ export PATH=/path/to/llvm/bin:$PATH
@@ -65,3 +65,5 @@ usable::
    $ (cd toolchain-wrapper && ./bootstrap)
    $ export PATH=/path/to/toolchain-wrapper:$PATH
 
+:: _hadrian: https://github.com/snowleopard/hadrian
+:: _toolchain-wrappers: https://github.com/zw3rk/toolchain-wrapper
