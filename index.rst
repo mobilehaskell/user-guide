@@ -66,6 +66,5 @@ usable::
    $ export PATH=/path/to/toolchain-wrapper:$PATH
 
 
-
-:: _hadrian: https://github.com/snowleopard/hadrian
-:: _toolchain-wrappers: https://github.com/zw3rk/toolchain-wrapper
+.. _hadrian: https://github.com/snowleopard/hadrian
+.. _toolchain-wrappers: https://github.com/zw3rk/toolchain-wrapper
