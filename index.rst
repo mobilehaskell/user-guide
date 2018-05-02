@@ -18,13 +18,13 @@ create a ``sysroot`` folder yourself, with the headers and libraries (see
 `Making a Raspbian Cross Compilation SDK <https://medium.com/@zw3rk/making-a-raspbian-cross-compilation-sdk-830fe56d75ba>`_
 for more details).
 
-With the ``sysroot`` ready, you can run the following command:
+With the ``sysroot`` ready, you can run the following command::
 
-    $ docker run -it -v /path/to/sysroot:/rpi/sysroot tritlo/ghc-to-rpi 
+   $ docker run -it -v /path/to/sysroot:/rpi/sysroot tritlo/ghc-to-rpi 
 
-To launch a docker container where you can cross-compile to your Raspberry Pi by running:
+To launch a docker container where you can cross-compile to your Raspberry Pi by running::
 
-    $ arm-linux-gnueabihf-ghc 
+   $ arm-linux-gnueabihf-ghc 
 
 For easy access, you can add ``-v $(pwd):/code`` to the docker launch command to
 have the current directory mounted to the ``/code`` directory in the container.
