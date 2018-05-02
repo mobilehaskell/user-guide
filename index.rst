@@ -84,6 +84,5 @@ usable::
    $ (cd toolchain-wrapper && ./bootstrap)
    $ export PATH=/path/to/toolchain-wrapper:$PATH
 
-.. _zw3rk article: 
 .. _hadrian: https://github.com/snowleopard/hadrian
 .. _toolchain-wrappers: https://github.com/zw3rk/toolchain-wrapper
