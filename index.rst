@@ -10,6 +10,25 @@ This is the accompanying User Guide for building mobile and embedded Haskell
 application using the The Glorious Glasgow Haskell Compilation System as a
 cross compiler.
 
+Docker Image for Raspberry Pi
+-----------------------------
+If your target is a Raspberry Pi image, you can use a pre-defined docker image
+instead of installing the toolchain on your local machine. You'll still need to
+create a ``sysroot`` folder yourself, with the headers and libraries (see
+`Making a Raspbian Cross Compilation SDK <https://medium.com/@zw3rk/making-a-raspbian-cross-compilation-sdk-830fe56d75ba>`_
+for more details).
+
+With the ``sysroot`` ready, you can run the following command::
+
+   $ docker run -it -v /path/to/sysroot:/rpi/sysroot tritlo/ghc-to-rpi 
+
+To launch a docker container where you can cross-compile to your Raspberry Pi by running::
+
+   $ arm-linux-gnueabihf-ghc 
+
+For easy access, you can add ``-v $(pwd):/code`` to the docker launch command to
+have the current directory mounted to the ``/code`` directory in the container.
+
 Installation
 ------------
 
@@ -64,7 +83,6 @@ usable::
    $ git clone https://github.com/zw3rk/toolchain-wrapper.git
    $ (cd toolchain-wrapper && ./bootstrap)
    $ export PATH=/path/to/toolchain-wrapper:$PATH
-
 
 .. _hadrian: https://github.com/snowleopard/hadrian
 .. _toolchain-wrappers: https://github.com/zw3rk/toolchain-wrapper
