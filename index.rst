@@ -98,5 +98,5 @@ Segfaults on Raspberry Pi
 Anything that uses the `time` package directly or indirectly may unexpectedly
 segfault.  It appears that the ``__tzfile_read`` function from ``glibc`` segfaults
 when called via ``tzset`` from GHC.  The exact reasons why this happens are unknown
-right now. A suitable workaround is to set the ``TZ`` environment variable when
-launching the application. E.g. ``$ TZ="UTC0" ./Application``
+right now. A suitable workaround is to set `the TZ environment variable <https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html>`_ to a value that's
+not a zonefile when launching the application. E.g. ``$ TZ="UTC0" ./Application``.
